@@ -1,0 +1,12 @@
+{
+  "version": "1.1.0",
+  "versionCode": 2,
+  "buildDate": "2026-11-13",
+  "buildTime": 1794584400000,
+  "apkUrl": "https://m2s-app-production.up.railway.app/m2s-field-survey.apk",
+  "apkSize": "7.4 MB",
+  "title": "M2S Field Survey v1.1.0",
+  "releaseNotes": "B2 single-select document verification, removed cluster target restrictions, and in-app update support.",
+  "mandatory": false
+}
+

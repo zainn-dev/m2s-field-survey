@@ -1,0 +1,32 @@
+{
+  "name": "m2s-field-survey",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:no-db": "node scripts/dev.mjs --no-db",
+    "setup": "npm -w apps/api run migrate:deploy && npm -w apps/api run seed",
+    "seed:demo": "npm -w apps/api run seed:demo",
+    "bootstrap-admin": "npm -w apps/api run bootstrap-admin",
+    "db:reset": "npm -w apps/api run db:reset",
+    "db:backup": "node scripts/backup-db.mjs",
+    "db:restore": "node scripts/restore-db.mjs",
+    "package:source": "node scripts/create-source-zip.mjs",
+    "typecheck": "npm -w packages/shared run build && npm -w packages/shared run typecheck && npm -w apps/api run typecheck && npm -w apps/web run typecheck && npm -w apps/mobile run typecheck",
+    "test": "npm -w packages/shared run build && npm -w apps/api test && npm -w apps/web test && npm -w apps/mobile test",
+    "build": "npm -w packages/shared run build && npm -w apps/api run build && npm -w apps/web run build && npm -w apps/mobile run build",
+    "mobile:build": "npm -w apps/mobile run build",
+    "mobile:sync": "npm -w apps/mobile run cap:sync",
+    "mobile:apk": "npm -w apps/mobile run apk:debug",
+    "android:sync": "node scripts/cap-sync.mjs",
+    "android:open": "node scripts/open-android-studio.mjs",
+    "android:build": "node scripts/build-android-apk.mjs",
+    "android:release": "node scripts/build-android-apk.mjs --release",
+    "android:install": "node scripts/install-android-apk.mjs",
+    "deploy:check": "node scripts/deploy-check.mjs",
+    "start": "npm -w apps/api start"
+  }
+}

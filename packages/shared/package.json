@@ -1,0 +1,69 @@
+{
+  "name": "@m2s/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./validation": {
+      "import": "./src/validation/index.ts",
+      "require": "./dist-cjs/validation/index.js",
+      "types": "./src/validation/index.ts"
+    },
+    "./utils/surveyQuality": {
+      "import": "./src/utils/surveyQuality.ts",
+      "require": "./dist-cjs/utils/surveyQuality.js",
+      "types": "./src/utils/surveyQuality.ts"
+    },
+    "./utils/studyIndicators": {
+      "import": "./src/utils/studyIndicators.ts",
+      "require": "./dist-cjs/utils/studyIndicators.js",
+      "types": "./src/utils/studyIndicators.ts"
+    },
+    "./data/questionnaire": {
+      "import": "./src/data/questionnaire.ts",
+      "require": "./dist-cjs/data/questionnaire.js",
+      "types": "./src/data/questionnaire.ts"
+    },
+    "./survey/surveyModel": {
+      "import": "./src/survey/surveyModel.ts",
+      "require": "./dist-cjs/survey/surveyModel.js",
+      "types": "./src/survey/surveyModel.ts"
+    },
+    "./types/survey": {
+      "import": "./src/types/survey.ts",
+      "require": "./dist-cjs/types/survey.js",
+      "types": "./src/types/survey.ts"
+    },
+    "./*": "./src/*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.cjs.json && node -e \"require('fs').writeFileSync('dist-cjs/package.json', JSON.stringify({type:'commonjs'}))\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dexie": "^4.0.8"
+  },
+  "peerDependencies": {
+    "lucide-react": "^1.72.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "peerDependenciesMeta": {
+    "lucide-react": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "lucide-react": "^1.72.0",
+    "react": "^18.3.1",
+    "typescript": "^5.6.0"
+  }
+}

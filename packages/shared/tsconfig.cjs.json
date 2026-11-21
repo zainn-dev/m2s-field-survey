@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist-cjs",
+    "rootDir": "src",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/types/**/*.ts",
+    "src/data/**/*.ts",
+    "src/survey/**/*.ts",
+    "src/validation/**/*.ts",
+    "src/utils/surveyQuality.ts",
+    "src/utils/studyIndicators.ts"
+  ]
+}
+

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">M2S Field Survey</string>
+    <string name="title_activity_main">M2S Field Survey</string>
+    <string name="package_name">org.miles2smile.fieldsurvey</string>
+    <string name="custom_url_scheme">org.miles2smile.fieldsurvey</string>
+</resources>

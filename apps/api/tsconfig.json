@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@m2s/shared/validation": ["../../packages/shared/dist-cjs/validation/index.d.ts"],
+      "@m2s/shared/types/survey": ["../../packages/shared/dist-cjs/types/survey.d.ts"],
+      "@m2s/shared/utils/surveyQuality": ["../../packages/shared/dist-cjs/utils/surveyQuality.d.ts"],
+      "@m2s/shared/utils/studyIndicators": ["../../packages/shared/dist-cjs/utils/studyIndicators.d.ts"],
+      "@m2s/shared/data/questionnaire": ["../../packages/shared/dist-cjs/data/questionnaire.d.ts"],
+      "@m2s/shared/*": ["../../packages/shared/dist-cjs/*"]
+    },
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src", "prisma"]
+}

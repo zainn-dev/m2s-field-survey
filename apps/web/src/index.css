@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #faf8f2;
+    color: #181611;
+    font-family: 'Plus Jakarta Sans', 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  * {
+    border-color: #e7e2d4;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d1be;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4aa92;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ---------- Admin console ---------- */
+.admin-shell {
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+.m2s-check {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #9e9682;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+}
+.m2s-check:checked {
+  background: #fdc513;
+  border-color: #d9ae00;
+}
+.m2s-check:checked::after {
+  content: '';
+  width: 8px;
+  height: 5px;
+  border-left: 2px solid #181611;
+  border-bottom: 2px solid #181611;
+  transform: translateY(-1px) rotate(-45deg);
+}
+.m2s-check:focus-visible {
+  outline: 2px solid #d9ae00;
+  outline-offset: 2px;
+}

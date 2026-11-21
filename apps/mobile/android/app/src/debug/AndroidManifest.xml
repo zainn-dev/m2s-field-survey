@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Debug build variant only: permits HTTP connections to local emulator (10.0.2.2:3000) or LAN test server.
+         Release builds enforce usesCleartextTraffic="false" from src/main/AndroidManifest.xml. -->
+    <application
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic" />
+
+</manifest>
+
